@@ -1,5 +1,5 @@
 // File: background.js (Improved)
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = CONFIG.API_BASE_URL;
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
