@@ -1,0 +1,26 @@
+<!-- File: accept-invite.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accept Invitation - Haks AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="message-card" class="auth-form">
+            <h2 id="card-title">Loading Invitation...</h2>
+            <p id="card-message">Please wait while we verify your invitation link.</p>
+            <button id="action-button" class="hidden">Accept Invitation</button>
+            <div class="switch-link hidden" id="login-link-container">
+                <!-- This link will appear if the user is not logged in -->
+                <a href="login.html">Log In or Sign Up to Continue</a>
+            </div>
+        </div>
+    </div>
+    <script src="token-manager.js"></script>
+    <script src="context-detector.js"></script>
+    <script src="accept-invite.js"></script>
+</body>
+</html>

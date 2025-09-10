@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haks AI - Knowledge Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo">H</span>
+                <h1>Haks AI</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Dashboard</a>
+                <a href="knowledge.html" class="nav-item active">Knowledge Hub</a>
+                <a href="settings.html" class="nav-item">Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div id="user-info" class="user-info">
+                    <span class="user-avatar">?</span>
+                    <span id="user-email" class="user-email">Loading...</span>
+                </div>
+                <button id="logout-button" class="logout-button">Log Out</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <h2>Knowledge Hub</h2>
+                <p>Search and filter all your ingested knowledge from every source.</p>
+            </header>
+            <section class="card filter-bar">
+                <div class="search-input-wrapper">
+                    <input type="text" id="search-input" placeholder="Search all knowledge...">
+                </div>
+                <div class="filter-buttons">
+                    <span>Filter by:</span>
+                    <button class="filter-btn" data-source="slack">Slack</button>
+                    <button class="filter-btn" data-source="email">Email</button>
+                    <button class="filter-btn" data-source="gdoc">Docs</button>
+                    <button class="filter-btn" data-source="transcript">Transcripts</button>
+                    <button id="clear-filters-btn" class="filter-btn clear hidden">Clear</button>
+                </div>
+            </section>
+            <section id="knowledge-list-container" class="card">
+                <div id="knowledge-list-placeholder" class="placeholder-text">Loading knowledge...</div>
+            </section>
+        </main>
+    </div>
+    <script src="token-manager.js"></script>
+    <script src="context-detector.js"></script>
+    <script src="knowledge.js"></script>
+</body>
+</html>

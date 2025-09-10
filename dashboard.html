@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haks AI - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo">H</span>
+                <h1>Haks AI</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">Dashboard</a>
+                <a href="knowledge.html" class="nav-item">Knowledge Hub</a>
+                <a href="settings.html" class="nav-item">Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div id="user-info" class="user-info">
+                    <span class="user-avatar">?</span>
+                    <span id="user-email" class="user-email">Loading...</span>
+                </div>
+                <button id="logout-button" class="logout-button">Log Out</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <h2>Dashboard</h2>
+                <p>Upload a meeting transcript to get an instant AI summary.</p>
+            </header>
+            <section class="card">
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="transcript-file">Transcript File (.txt)</label>
+                        <input type="file" id="transcript-file" accept=".txt" required>
+                    </div>
+                    <button type="submit" id="upload-button">Generate Summary</button>
+                    <p id="upload-error" class="error-message"></p>
+                </form>
+            </section>
+            <section id="results-section" class="card hidden">
+                <div id="summary-display"></div>
+                <hr class="divider">
+                <div id="qa-interface">
+                    <h3>Ask a Question About This Document</h3>
+                    <form id="qa-form">
+                        <div class="form-group">
+                            <input type="text" id="qa-question" placeholder="e.g., Who is responsible for the Q4 report?" required>
+                        </div>
+                        <button type="submit" id="qa-button">Ask</button>
+                    </form>
+                    <div id="qa-answer" class="answer-box"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="token-manager.js"></script>
+    <script src="context-detector.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

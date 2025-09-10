@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haks AI - Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header"><span class="logo">H</span><h1>Haks AI</h1></div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Dashboard</a>
+                <a href="knowledge.html" class="nav-item">Knowledge Hub</a>
+                <a href="settings.html" class="nav-item active">Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div id="user-info" class="user-info"><span class="user-avatar">?</span><span id="user-email">Loading...</span></div>
+                <button id="logout-button" class="logout-button">Log Out</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <h2>Workspace Settings</h2>
+                <p>Manage members and invite new people to your workspace.</p>
+            </header>
+
+            <!-- Invite Member Form -->
+            <section class="card">
+                <h3>Invite New Member</h3>
+                <form id="invite-form">
+                    <div class="form-group">
+                        <label for="invitee-email">Email Address</label>
+                        <input type="email" id="invitee-email" placeholder="teammate@example.com" required>
+                    </div>
+                    <button type="submit" id="invite-button">Send Invitation</button>
+                </form>
+                <div id="invite-feedback" class="feedback-message hidden"></div>
+            </section>
+
+            <!-- Member List Section -->
+            <section class="card">
+                <h3>Workspace Members</h3>
+                <div id="member-list-container">
+                    <div id="member-list-placeholder" class="placeholder-text">Loading members...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="token-manager.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

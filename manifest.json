@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Haks AI",
+  "version": "1.2.0",
+  "description": "Your invisible cofounder that captures and organizes knowledge.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"  
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
